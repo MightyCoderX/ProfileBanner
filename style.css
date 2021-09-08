@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body
+{
+    background: #222;
+}
+
+.background
+{
+    width: 100vw;
+    height: calc(100vw / 3 + 1px);
+    background: paint(stars);
+    position: relative;
+    isolation: isolate;
+}
+
+.mars
+{
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(90deg, #BD4602, #7c0103);
+    position: absolute;
+    right: 12%;
+    top: 15%;
+    border-radius: 50%;
+}
+
+.mars .details
+{
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(100deg, #888, #000 40%);
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+    filter: blur(5px);
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.mars .code-symbol
+{
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    font-size: 15vw;
+    width: max-content;
+    color: #111111b4;
+    user-select: none;
+}
+
+.starship
+{
+    width: 16%;
+    height: 11%;
+    background: 
+        linear-gradient(-170deg, #999 10%,  transparent 30%),
+        linear-gradient(180deg, #999 5%,  #555 25% 50%, #070707 50%);
+    border-bottom: 1px solid #111;
+    box-shadow: 20px 0 10px 5px #000;
+    border-radius: 0 50% 50% 0;
+    position: absolute;
+    top: 46%;
+    left: 15%;
+}
+
+.starship .rocket-exhaust
+{
+    --exhaust-bg: #5A5097;
+    height: 50%;
+    width: 80%;
+    background: var(--exhaust-bg);
+    opacity: 0.6;
+    border-radius: 100%;
+    position: absolute;
+    left: -50px;
+    top: 25%;
+    z-index: -1;
+}
+
+.starship .rocket-exhaust::before,
+.starship .rocket-exhaust::after
+{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: var(--exhaust-bg);
+    opacity: 0.8;
+}
+
+.starship .rocket-exhaust::before
+{
+    border-radius: 100%;
+    top: -45%;
+}
+
+.starship .rocket-exhaust::after
+{
+    border-radius: 100%;
+    bottom: -45%;
+}
+
+.starship .rocket-exhaust .plume
+{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 100%;
+    left: 10%;
+    z-index: -1;
+}
+
+.starship .rocket-exhaust .plume-1
+{
+    top: -25%;
+}
+
+.starship .rocket-exhaust .plume-2
+{
+    top: 25%;
+    opacity: 0.3;
+}
+
+.starship .rocket-exhaust .plume-3
+{
+    bottom: -25%;
+}
+
