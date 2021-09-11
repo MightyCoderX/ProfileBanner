@@ -10,6 +10,8 @@ registerPaint('stars', class
         
         ctx.fillStyle = '#000';
         ctx.fillRect(0, 0, width, height);
+
+        Math.seedrandom('space');
         
         for(let i = 0; i < width/2; i++)
         {
