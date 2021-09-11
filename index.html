@@ -8,6 +8,12 @@
 
         <link rel="stylesheet" href="style.css">
 
+        <script>
+            CSS.paintWorklet.addModule('https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js');
+            CSS.paintWorklet.addModule('/js/stars.js');
+            CSS.paintWorklet.addModule('/js/starship-windows.js');
+        </script>
+
         <script src="app.js" defer></script>
     </head>
     <body>
@@ -17,15 +23,19 @@
                 <h1 class="code-symbol">&lt;/&gt;</h1>
             </div>
             <div class="starship">
+                <div class="nose-cone">
+                    <div class="windows"></div>
+                </div>
+                <div class="bottom">
+
+                </div>
                 <div class="rocket-exhaust">
                     <div class="plume plume-1"></div>
                     <div class="plume plume-2"></div>
                     <div class="plume plume-3"></div>
                 </div>
-                <div class="nose-cone">
-                    <div class="windows"></div>
-                </div>
             </div>
         </div>
+        <button id="btnSaveImg">Save as Image</button>
     </body>
 </html>
