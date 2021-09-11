@@ -24,10 +24,10 @@ registerPaint('starshipWindows', class
         }
 
         ctx.beginPath();
-        ctx.moveTo(width, windowGap.x);
-        ctx.lineTo(width-gap, windowGap.x);
-        ctx.lineTo(width-gap, height-windowGap.x);
-        ctx.lineTo(width, height-windowGap.x)
+        ctx.moveTo(width, 0);
+        ctx.lineTo(width-gap, 0);
+        ctx.lineTo(width-gap, height);
+        ctx.lineTo(width, height)
         ctx.closePath();
         ctx.fill();
     }
